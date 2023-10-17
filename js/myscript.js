@@ -14,3 +14,15 @@ function trocarClasse() {
     var fraseAtual = document.getElementById("frase");
     fraseAtual.className = "h1_2";
 }
+
+var nome = "Wanderson"
+
+console.log ("o nome é =" + nome)
+
+function trocarTexto() {
+    var elemento = document.getElementById("frase")
+    var nova = document.getElementById("novafrase").value
+
+
+    elemento.innerHTML = nova
+}
