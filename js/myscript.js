@@ -1,6 +1,6 @@
 
 function mudarFrase() {
-    var elemento = document.getElementById("frase")
+    var elemento = gebi("frase")
     elemento.innerHTML = "Qualquer frase"
     elemento.style.color = "red";
     elemento.style.fontSize = "25px";
@@ -11,7 +11,7 @@ function mudarFrase() {
 }
 
 function trocarClasse() {
-    var fraseAtual = document.getElementById("frase");
+    var fraseAtual = gebi("frase");
     fraseAtual.className = "h1_2";
 }
 
@@ -20,9 +20,13 @@ var nome = "Wanderson"
 console.log ("o nome é =" + nome)
 
 function trocarTexto() {
-    var elemento = document.getElementById("frase")
-    var nova = document.getElementById("novafrase").value
+    var elemento = gebi("frase")
+    var nova = gebi("novafrase").value
 
 
     elemento.innerHTML = nova
+}
+
+function gebi(id) {
+    return document.getElementById(id)
 }
