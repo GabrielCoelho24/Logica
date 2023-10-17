@@ -7,7 +7,7 @@ function mudarFrase() {
     elemento.style.backgroundColor = "yellow";
 
     document.body.style.backgroundColor = "blue";
-    elemento.innerHTML = "<img src=\'img/a.jpeg\' />"
+    elemento.innerHTML = "<img src=\'img/a.jpg\' />"
 }
 
 function trocarClasse() {
