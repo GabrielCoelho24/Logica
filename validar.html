@@ -6,10 +6,14 @@
             var sobreNome = "Coelho"
             var nomeCompleto = nome + " " + sobreNome
             var tamanhoDoNome = nomeCompleto.length
-            var texto = nomeCompleto + "\n tem tamanho de " + tamanhoDoNome
-            console.log(texto)
+            var txt = nomeCompleto + "\n tem tamanho de " + tamanhoDoNome
+            imprimir(txt)
+
+            function imprimir(texto){
+                console.log(texto)
             alert(texto)
             document.writeln(texto)
+            }
         </script>
     </head>
     <body>
