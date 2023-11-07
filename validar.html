@@ -33,6 +33,7 @@
             function validar(){
 				var email = gebi("idEmail").value
 				var senha = gebi("idSenha").value
+                var idade = gebi("idIdade").value
 
                 if(email.length < 1){
                     alert("Preencha o email!")
@@ -41,6 +42,11 @@
 
                 if(senha.length < 1){
                     alert("Preencha a senha!")
+                    return
+                }
+
+                if(idade < 16){
+                    alert("Idade Inválida")
                     return
                 }
             }
@@ -56,7 +62,8 @@
                 <fieldset align="center" style="width:270px"> 
                     <legend>Login:</legend>
                     Email: <input id="idEmail" name="email" type="text" onblur="maiuscula();"><br>
-                    Senha: <input id="idSenha" name="senha" type="password"><br> 
+                    Senha: <input id="idSenha" name="senha" type="password"><br>
+                    Idade: <input id="idIdade" name="idade" type="number"><br> 
                     <input type="button" value="Enviar" onclick="validar();"> 
                 </fieldset> 
             </form> 
