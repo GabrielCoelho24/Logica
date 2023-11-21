@@ -6,14 +6,73 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script>
-            function contar(){
-                for(var i=0 ; i<10; i++){
-                    document.write(i + "<br>")
+            function contar() {
+                var soma = 0
+                for (var i = 0; i < 1001; i++) {
+                    document.write(i + "" + soma + "<br>")
+                    soma = soma + i
+                }
+            }
+
+            function contarwhile() {
+                var n = 0;
+
+                while (n <= 50)
+                {
+                    document.write(n);
+                    document.write('<br>');
+                    n = n + 5;
+                }
+            }
+
+            function ultrapassar() {
+                var n = 0
+                var soma = 0
+                while (n < 21) 
+                {
+                    if((soma + n) > 101) {
+                        break
+                    } else {
+                        soma = soma + n
+                    }
+                    n = n + 1
+                }
+                document.write("soma = " + soma)
+            }
+
+            function pares() {
+                var n = 0;
+
+                while (n <= 25)
+                {
+                    document.write(n);
+                    document.write("<br>");
+                    n = n + 2;
+                }
+            }
+
+            function adivinhar() {
+
+                var numero = prompt("Adivinhe o número");
+                while (numero != 20) {
+                    numero = prompt("Errou! Diga um numero");
+                }
+                alert("Acertou! Era 20 mesmo!")
+            }
+
+            function arranjos() {
+                var numeros = [9, 21, 7, 15];
+
+                var cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi", "Abobrinha"];
+
+                for (let i = 0; i < cars.length; i++) {
+                const element = cars[i];
+                document.write(element + "<br>")
                 }
             }
         </script>
     </head>
     <body>
-        <input type="button" value="Enviar" onclick="contar()">
+        <input type="button" value="Enviar" onclick="arranjos()">
     </body>
 </html>
