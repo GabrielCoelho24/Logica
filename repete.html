@@ -63,13 +63,16 @@
             function arranjos() {
                 var numeros = [9, 21, 7, 15];
 
-                var cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi", "Abobrinha"];
+                var cars = ["fusca", "gol", "opala", 147]
+                document.write("tamanho =" + cars.length + "<br>")
 
-                for (let i = 0; i < cars.length; i++) {
-                const element = cars[i];
-                document.write(element + "<br>")
-                }
+                document.write("<hr>invertido <br>")
+                for (let i = cars.length - 1; i >= 0; i--) {
+                    const car = cars[i];
+                    document.write(car + "<br>")
+                    }
             }
+            
         </script>
     </head>
     <body>
