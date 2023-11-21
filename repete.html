@@ -72,10 +72,61 @@
                     document.write(car + "<br>")
                     }
             }
-            
+
+            //achando e removendo array
+            function conta(){
+                var a = ["josé", "maria", "padre", "joana", "bento", "francisco"]
+
+                for (let index = 0; index < a.length; index++) {
+                    const element = a[index];
+                    document.write("casinha: " + index + "tem " + element + "<br>")
+                
+                    if(element == "padre"){
+                        document.write("casinha: " + index + "tem " + element + "<br>")
+                        break
+                    }
+                }
+           
+                var quem = prompt("Diga um nome")
+                var ondeEsta = a.indexOf(quem)
+                if(ondeEsta !=-1){
+                    document.write("casinha: " + ondeEsta + "tem " + quem + "<br>")
+                    a.splice(ondeEsta,1)//remove 1
+                }else{
+                    document.write("não achei " + quem + "<br>")
+                }
+                document.write("alterado" + a)
+            }
+
+
+            function exercicio(){
+                var n = prompt("Diga um número")
+
+                for (let index = 0; index <= n; index++) {
+                  document.write(index + "<br>")
+                }
+            }
+
+            function limiteremove(){
+                const n = prompt("Diga o limite")
+                const array = []
+                for (let index = 0; index <= n; index++) { 
+                    array.push(index)
+                }
+                document.write("original: " + array + "<br>")
+                document.write("<hr>")
+
+                const remove = parseInt(prompt("digite um dos numeros para ser apagado"))
+                if(remove != -1){
+                    array.splice(remove,1)
+                }
+                document.write("removido: " + array + "<br>")
+            }
+
+
         </script>
     </head>
     <body>
-        <input type="button" value="Enviar" onclick="arranjos()">
+        <input type="button" value="Enviar" onclick="limiteremove()";>
     </body>
 </html>
